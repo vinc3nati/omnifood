@@ -1,6 +1,6 @@
-/* ----------------------------------------------------- */
+/* ----------------------------------------------- */
 /* BASIC SETUP */
-/* ----------------------------------------------------- */
+/* ----------------------------------------------- */
 
 * {
   margin: 0;
@@ -121,7 +121,7 @@ h2:after {
   margin-top: -5px;
 }
 
-/* ========= LINKS ========= */
+/* ----- LINKS ----- */
 
 a:link,
 a:visited {
@@ -138,6 +138,7 @@ a:active {
   color: #555;
   border-bottom: 1px solid transparent;
 }
+
 /* ========= BUTTONS ========= */
 .btn:link,
 .btn:visited,
@@ -147,7 +148,8 @@ input[type="submit"] {
   font-weight: 300;
   text-decoration: none;
   border-radius: 200px;
-  transition: background-color 0.2s, color 0.2s, border 0.2s;
+  -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
 .btn-orng:link,
@@ -190,11 +192,16 @@ input[type="submit"]:active {
 /* ----------------------------------------------------- */
 
 header {
+  background-image: -webkit-linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(img/hero.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url(img/hero.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh; /* 100% of viewport */
+  height: 100vh;
   background-attachment: fixed;
 }
 
@@ -203,6 +210,8 @@ header {
   width: 1140px;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -296,8 +305,8 @@ header {
 .meals-photo img:hover {
   opacity: 1;
   -webkit-transform: scale(1.03);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 /* ----------------------------------------------------- */
@@ -379,6 +388,11 @@ header {
 /* ----------------------------------------------------- */
 
 .section-testimonials {
+  background-image: -webkit-linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(img/back-customers.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(img/back-customers.jpg);
   background-size: cover;
@@ -538,9 +552,10 @@ footer {
 .footer-nav li a:visited,
 .social-links li a:link,
 .social-links li a:visited {
-  border: 0;
   text-decoration: none;
+  border: 0;
   color: #888;
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
 
@@ -558,6 +573,7 @@ footer {
 .ion-social-twitter,
 .ion-social-googleplus,
 .ion-social-instagram {
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
 
